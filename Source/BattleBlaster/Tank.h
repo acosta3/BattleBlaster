@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "BasePawn.h"
 #include "GameFramework/SpringArmComponent.h"
-#include "Components/CameraComponent.h"
+#include "Camera/CameraComponent.h"
 
 #include "Tank.generated.h"
 
