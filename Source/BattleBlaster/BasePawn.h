@@ -31,7 +31,7 @@ public:
 	UCapsuleComponent* CapsuleComp;
 
 	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponenent* BaseMesh;
+	UStaticMeshComponent* BaseMesh;
 
 	UPROPERTY(VisibleAnywhere)
 	UStaticMeshComponent* TurretMesh;
