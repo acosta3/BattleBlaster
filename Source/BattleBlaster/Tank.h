@@ -47,6 +47,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	UInputAction* MoveAction;
 
+	
 
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* SpringArmComp;
@@ -54,7 +55,10 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* CameraComp;
 
+	UPROPERTY(EditAnywhere)
+	float Speed = 600.f;
 
-	void MoveInput();
+
+	void MoveInput(const FInputActionValue& Value);
 	
 };
