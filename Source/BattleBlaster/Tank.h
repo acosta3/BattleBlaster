@@ -7,8 +7,6 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 
-#include "InputMappingContext.h"
-#include "EnhancedInputSubsystems.h"
 
 
 
@@ -38,13 +36,13 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	UInputMappingContext* DefaultMapping;
+	 class UInputMappingContext* DefaultMapping;
 
 
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* SpringArmComp;
 
 	UPROPERTY(VisibleAnywhere)
-	UCameraComponent* CameraComp;
+	class UCameraComponent* CameraComp;
 	
 };
