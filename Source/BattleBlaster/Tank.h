@@ -41,10 +41,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Input")
 	class UInputMappingContext* DefaultMapping;
 
-	UInputAction* MoveAction;
+	
 
 
 	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputAction* MoveAction;
 
 
 	UPROPERTY(VisibleAnywhere)
