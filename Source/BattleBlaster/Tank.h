@@ -7,6 +7,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 
+#include "InputAction.h"
+#include "InputActionValue.h"
+#include "EnhancedInputComponent.h"
 
 
 
@@ -36,7 +39,12 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	UPROPERTY(EditAnywhere, Category = "Input")
-	 class UInputMappingContext* DefaultMapping;
+	class UInputMappingContext* DefaultMapping;
+
+	UInputAction* MoveAction;
+
+
+	UPROPERTY(EditAnywhere, Category = "Input")
 
 
 	UPROPERTY(VisibleAnywhere)
@@ -44,5 +52,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere)
 	class UCameraComponent* CameraComp;
+
+
+	void MoveInput();
 	
 };

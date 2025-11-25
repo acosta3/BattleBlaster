@@ -59,4 +59,15 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	UEnhancedInputComponent* EIC = Cast<UEnhancedInputComponent>(PlayerInputComponent);
+	if(EIC)
+	{
+		EIC->BindAction(MoveAction,ETriggerEvent::Triggered,this,&ATank::MoveInput);
+	}
+
+}
+
+void ATank::MoveInput()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Move Input Received"));
 }
