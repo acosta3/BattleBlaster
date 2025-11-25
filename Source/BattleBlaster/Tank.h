@@ -7,6 +7,11 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 
+#include "InputMappingContext.h"
+#include "EnhancedInputSubsystems.h"
+
+
+
 #include "Tank.generated.h"
 
 
@@ -31,6 +36,10 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	UInputMappingContext* DefaultMapping;
+
 
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* SpringArmComp;
