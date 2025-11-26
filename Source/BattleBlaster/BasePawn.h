@@ -27,5 +27,8 @@ public:
 	UStaticMeshComponent* TurretMesh;
 
 
+	void RotateTurret(FVector LookAtTarget);	
+
+
 
 };
