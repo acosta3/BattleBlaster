@@ -20,7 +20,34 @@ void ABattleBlasterGameMode::BeginPlay()
 	{
 		Tank = Cast<ATank>(PlayerPawn);
 	}
-	if (!Tank) {
+	if (!Tank) 
+	{
 		UE_LOG(LogTemp, Warning, TEXT("Tank not found!"));
 	}
+
+	AActor* Tower = Towers[0];  
+
+	int32 LoopIndex = 0;
+
+
+
+		while (LoopIndex < TowerCount)
+		{
+			AActor* TowerActor = Towers[LoopIndex];
+			if (TowerActor)
+			{
+				ATower* TowerPawn = Cast<ATower>(TowerActor);
+				if (Tower)
+				{
+					TowerPawn->Tank = Tank;
+				}
+			}
+			LoopIndex++;
+		}
+
+	
+
+	
+
+
 }
