@@ -12,5 +12,17 @@ void ATower::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+
+	if (Tank)
+	{
+		FVector TankLocation = Tank->GetActorLocation();
+		FVector TowerLocation = GetActorLocation();
+		float DistanceToTank = FVector::Dist(TankLocation, TowerLocation);
+		if (DistanceToTank <= Distance)
+		{
+			Fire();
+		}
+	}
+
 	RotateTurret(Tank->GetActorLocation());
 }

@@ -22,5 +22,8 @@ protected:
 public:
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere)
+	float Distance = 300.0f;
+
 	ATank* Tank;
 };
