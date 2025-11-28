@@ -25,5 +25,11 @@ public:
 	UPROPERTY(EditAnywhere)
 	float Distance = 300.0f;
 
+
+	UPROPERTY(EditAnywhere)
+	float FireRate = 2.0f;
+
+	void CheckFireCondition();
+
 	ATank* Tank;
 };
