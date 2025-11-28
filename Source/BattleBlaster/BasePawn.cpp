@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
+
 #include "BasePawn.h"
 
 // Sets default values
@@ -42,7 +43,7 @@ void ABasePawn::Fire()
 	FVector SpawnLocation = ProjectileSpawnPoint->GetComponentLocation();
 	FRotator SpawnRotation = ProjectileSpawnPoint->GetComponentRotation();
 
-	DrawDebugSphere(GetWorld(), SpawnLocation, 25.f, 12, FColor::Red, false, 3.f);
+	GetWorld()->SpawnActor<AProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
 }
 
 

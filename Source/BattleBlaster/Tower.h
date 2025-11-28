@@ -23,13 +23,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-	float Distance = 300.0f;
+	float Distance = 1500.0f;
 
 
 	UPROPERTY(EditAnywhere)
 	float FireRate = 2.0f;
 
 	void CheckFireCondition();
+
+	bool InRange();
 
 	ATank* Tank;
 };

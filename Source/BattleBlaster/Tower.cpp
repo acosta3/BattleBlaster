@@ -18,10 +18,7 @@ void ATower::Tick(float DeltaTime)
 
 	if (Tank)
 	{
-		FVector TankLocation = Tank->GetActorLocation();
-		FVector TowerLocation = GetActorLocation();
-		float DistanceToTank = FVector::Dist(TankLocation, TowerLocation);
-		if (DistanceToTank <= Distance)
+		if (InRange())
 		{
 			RotateTurret(Tank->GetActorLocation());
 		}
@@ -34,12 +31,24 @@ void ATower::CheckFireCondition()
 {
 	if (Tank)
 	{
-		FVector TankLocation = Tank->GetActorLocation();
-		FVector TowerLocation = GetActorLocation();
-		float DistanceToTank = FVector::Dist(TankLocation, TowerLocation);
-		if (DistanceToTank <= Distance)
+		if (InRange())
 		{
 			Fire();
 		}
 	}
+}
+
+
+bool ATower ::InRange()
+{
+
+	FVector TankLocation = Tank->GetActorLocation();
+	FVector TowerLocation = GetActorLocation();
+	float DistanceToTank = FVector::Dist(TankLocation, TowerLocation);
+	if (DistanceToTank <= Distance)
+	{
+		return true;
+	}
+
+	return false;
 }
