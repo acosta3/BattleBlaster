@@ -109,6 +109,7 @@ void ATank::HandleDestruction()
 	SetActorHiddenInGame(true);
 	SetActorTickEnabled(false);
 	SetPlayerEnabledState(false);
+	isAlive = false;
 }
 
 void ATank::SetPlayerEnabledState(bool Enabled)
