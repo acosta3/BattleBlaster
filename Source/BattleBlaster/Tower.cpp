@@ -52,3 +52,9 @@ bool ATower ::InRange()
 
 	return false;
 }
+
+void ATower::HandleDestruction()
+{
+	Super::HandleDestruction();
+	this->Destroy();
+}

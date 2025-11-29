@@ -34,4 +34,6 @@ public:
 	bool InRange();
 
 	ATank* Tank;
+
+	void HandleDestruction();
 };

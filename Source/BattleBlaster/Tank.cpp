@@ -102,3 +102,10 @@ void ATank::TurnInput(const FInputActionValue& Value)
 
 
 }
+
+void ATank::HandleDestruction()
+{
+	Super::HandleDestruction();
+	//SetActorHiddenInGame(true);
+	//SetActorTickEnabled(false);
+}
