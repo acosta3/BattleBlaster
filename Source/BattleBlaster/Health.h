@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+
+#include "BattleBlasterGameMode.h"
 #include "Health.generated.h"
 
 
@@ -34,5 +36,6 @@ public:
 	void OnDamageTaken(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser);
 
 
-		
+	
+	ABattleBlasterGameMode* BBGameMode
 };
