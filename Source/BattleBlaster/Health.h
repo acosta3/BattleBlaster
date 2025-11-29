@@ -32,10 +32,13 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	float Health;
 
+
+	ABattleBlasterGameMode* BBGameMode;
+
 	UFUNCTION()
 	void OnDamageTaken(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser);
 
 
 	
-	ABattleBlasterGameMode* BBGameMode
+	
 };

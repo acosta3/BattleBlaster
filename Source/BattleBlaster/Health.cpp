@@ -29,7 +29,7 @@ void UHealth::BeginPlay()
 	AGameModeBase* GameMode = UGameplayStatics::GetGameMode(GetWorld());
 	if (GameMode)
 	{
-		ABattleBlasterGameMode* BBGameMode = Cast<ABattleBlasterGameMode>(GameMode);
+		BBGameMode = Cast<ABattleBlasterGameMode>(GameMode);
 	}
 
 	// ...
