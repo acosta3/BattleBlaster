@@ -27,7 +27,7 @@ void ATank::BeginPlay()
 {
 	Super::BeginPlay();
 
-	APlayerController* PlayerController= Cast<APlayerController>(Controller);
+	PlayerController= Cast<APlayerController>(Controller);
 
 	if(PlayerController)
 	{
@@ -53,7 +53,7 @@ void ATank::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	APlayerController* PlayerController = Cast<APlayerController>(Controller);
+	PlayerController = Cast<APlayerController>(Controller);
 
 	if (PlayerController)
 	{
@@ -106,6 +106,22 @@ void ATank::TurnInput(const FInputActionValue& Value)
 void ATank::HandleDestruction()
 {
 	Super::HandleDestruction();
-	//SetActorHiddenInGame(true);
-	//SetActorTickEnabled(false);
+	SetActorHiddenInGame(true);
+	SetActorTickEnabled(false);
+	SetPlayerEnabledState(false);
+}
+
+void ATank::SetPlayerEnabledState(bool Enabled)
+{
+	if (PlayerController)
+	{
+		if (Enabled)
+		{
+			EnableInput(PlayerController);
+		}
+		else
+		{
+			DisableInput(PlayerController);
+		}
+	}
 }
