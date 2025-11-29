@@ -147,14 +147,14 @@ ABasePawn::~ABasePawn() {}
 // ********** End Class ABasePawn ******************************************************************
 
 // ********** Begin Registration *******************************************************************
-struct Z_CompiledInDeferFile_FID_Users_antho_Desktop_UnrealEngineProjects_BattleBlasters_BattleBlaster_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_Statics
+struct Z_CompiledInDeferFile_FID_Users_antho_Desktop_Unreal_Engine_Projects_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
 		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 2950115907U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_antho_Desktop_UnrealEngineProjects_BattleBlasters_BattleBlaster_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_3105865771(TEXT("/Script/BattleBlaster"),
-	Z_CompiledInDeferFile_FID_Users_antho_Desktop_UnrealEngineProjects_BattleBlasters_BattleBlaster_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_antho_Desktop_UnrealEngineProjects_BattleBlasters_BattleBlaster_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_antho_Desktop_Unreal_Engine_Projects_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_3105865771(TEXT("/Script/BattleBlaster"),
+	Z_CompiledInDeferFile_FID_Users_antho_Desktop_Unreal_Engine_Projects_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_antho_Desktop_Unreal_Engine_Projects_Source_BattleBlaster_BasePawn_h__Script_BattleBlaster_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // ********** End Registration *********************************************************************

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\antho\\Desktop\\UnrealEngineProjects\\BattleBlasters\\BattleBlaster\\Source\\BattleBlaster\\BattleBlaster.Build.cs",
-		"C:\\Users\\antho\\Desktop\\UnrealEngineProjects\\BattleBlasters\\BattleBlaster\\Source\\BattleBlaster.Target.cs",
-		"C:\\Users\\antho\\Desktop\\UnrealEngineProjects\\BattleBlasters\\BattleBlaster\\Source\\BattleBlasterEditor.Target.cs"
+		"C:\\Users\\antho\\Desktop\\Unreal Engine Projects\\Source\\BattleBlaster\\BattleBlaster.Build.cs",
+		"C:\\Users\\antho\\Desktop\\Unreal Engine Projects\\Source\\BattleBlaster.Target.cs",
+		"C:\\Users\\antho\\Desktop\\Unreal Engine Projects\\Source\\BattleBlasterEditor.Target.cs"
 	],
 	"EngineVersion": "5.6.1"
 }
