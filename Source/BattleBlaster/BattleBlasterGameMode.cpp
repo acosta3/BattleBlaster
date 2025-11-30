@@ -3,6 +3,7 @@
 
 #include "BattleBlasterGameMode.h"
 #include "Kismet/GameplayStatics.h"
+#include "BattleBlasterGameInstance.h"
 #include"Tower.h"
 
 void ABattleBlasterGameMode::BeginPlay()
@@ -97,17 +98,28 @@ void ABattleBlasterGameMode::ActorDied(AActor* DeadActor)
 
 void ABattleBlasterGameMode::OnGameOverTimeout()
 {
-	FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
-	UGameplayStatics::OpenLevel(GetWorld(), *CurrentLevelName);
+	UGameInstance* GameInstance = GetGameInstance();
+
+	if(GameInstance)
+	{
+		UBattleBlasterGameInstance* BattleBlasterGameInstance = Cast<UBattleBlasterGameInstance>(GameInstance);
+		if (BattleBlasterGameInstance)
+		{
+			if (IsVictory)
+			{
+				// next level
+				BattleBlasterGameInstance->LoadNextLevel();
+			}
+			else
+			{
+				//repeat
+				BattleBlasterGameInstance->RestartCurrentLevel();
+			}
+		}
+	}
 
 	
-	if (IsVictory)
-	{
-		// next Level
-		UE_LOG(LogTemp, Warning, TEXT("You Win!"));
-	}
-	else
-	{
-		
-	}
+
+	
+	
 }
