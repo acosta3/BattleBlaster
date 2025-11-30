@@ -51,6 +51,10 @@ public:
 	USoundBase* LaunchSound;
 
 	UPROPERTY(EditAnywhere)
+	TSubclassOf<UCameraShakeBase> HitCameraShakeClass;
+
+
+	UPROPERTY(EditAnywhere)
 	USoundBase* HitSound;
 
 
