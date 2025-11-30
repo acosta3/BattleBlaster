@@ -44,7 +44,7 @@ void ATank::BeginPlay()
 			
 		}
 	}
-
+	SetPlayerEnabledState(false);
 }
 
 
