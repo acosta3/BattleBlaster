@@ -56,7 +56,7 @@ void ABattleBlasterGameMode::ActorDied(AActor* DeadActor)
 {
 
 	bool IsGameOver = false;
-	bool IsVictory = false;
+	IsVictory = false;
 
 	if(DeadActor)
 	{
@@ -99,4 +99,15 @@ void ABattleBlasterGameMode::OnGameOverTimeout()
 {
 	FString CurrentLevelName = UGameplayStatics::GetCurrentLevelName(GetWorld());
 	UGameplayStatics::OpenLevel(GetWorld(), *CurrentLevelName);
+
+	
+	if (IsVictory)
+	{
+		// next Level
+		UE_LOG(LogTemp, Warning, TEXT("You Win!"));
+	}
+	else
+	{
+		
+	}
 }

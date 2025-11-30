@@ -22,11 +22,14 @@ protected:
 
 public:
 	UPROPERTY(EditAnywhere)
-	float GameOverDelay = 3.0f;
+	float GameOverDelay = 2.0f;
  
 	ATank* Tank;
 	int32 TowerCount;
 
+
+	
+	bool IsVictory = false;
 
 	void ActorDied(AActor* DeadActor);
 
