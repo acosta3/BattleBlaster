@@ -6,6 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Components/CapsuleComponent.h"
 #include "Projectile.h" 
+#include "Kismet/GameplayStatics.h"
 
 
 #include "NiagaraFunctionLibrary.h"
@@ -40,6 +41,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	UNiagaraSystem* DestructParticles;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase* ExplodeSound;
 
 	void RotateTurret(FVector LookAtTarget);	
 

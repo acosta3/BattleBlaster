@@ -58,6 +58,10 @@ void ABasePawn::HandleDestruction()
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), DestructParticles, GetActorLocation(), GetActorRotation());
 	}
+	if(ExplodeSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), ExplodeSound, GetActorLocation());
+	}
 }
 
 

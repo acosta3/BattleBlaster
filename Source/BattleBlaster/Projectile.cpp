@@ -33,6 +33,11 @@ void AProjectile::BeginPlay()
 	
 	StaticComp->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
 
+	if(LaunchSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), LaunchSound, GetActorLocation());
+	}
+
 
 }
 
@@ -59,6 +64,12 @@ void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimi
 			{
 				UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), HitParticles, GetActorLocation(), GetActorRotation());
 			}
+
+			if (HitSound)
+			{
+				UGameplayStatics::PlaySoundAtLocation(GetWorld(), HitSound, GetActorLocation());
+			}
+
 		}
 		
 	}

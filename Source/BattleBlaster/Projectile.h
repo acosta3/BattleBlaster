@@ -11,6 +11,8 @@
 #include "NiagaraComponent.h"
 #include "NiagaraFunctionLibrary.h"
 
+
+
 #include "Projectile.generated.h"
 
 UCLASS()
@@ -44,6 +46,12 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	float Damage = 25.0f;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase* LaunchSound;
+
+	UPROPERTY(EditAnywhere)
+	USoundBase* HitSound;
 
 
 	UFUNCTION()
